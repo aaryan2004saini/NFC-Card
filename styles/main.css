@@ -1,0 +1,142 @@
+:where([class^="ri-"])::before { 
+  content: "\f3c2"; 
+}
+
+body {
+  min-height: 100vh;
+  height: 100vh;
+  background: url('https://readdy.ai/api/search-image?query=luxury%20jewelry%20store%20interior%20with%20glass%20display%20cases%2C%20golden%20warm%20lighting%2C%20crystal%20chandeliers%2C%20marble%20floors%2C%20high-end%20retail%20environment%2C%20professional%20product%20photography%2C%20elegant%20and%20sophisticated%20atmosphere&width=1920&height=1080&seq=1&orientation=landscape') center/cover fixed no-repeat;
+  font-family: 'Inter', sans-serif;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 1rem;
+}
+
+body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 0;
+}
+
+.glass {
+  z-index: 1;
+  position: relative;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.2),
+    inset 0 1px 2px rgba(255, 255, 255, 0.6),
+    inset 0 -1px 2px rgba(255, 255, 255, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.glass::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    45deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.1) 45%,
+    rgba(255, 255, 255, 0.2) 50%,
+    rgba(255, 255, 255, 0.1) 55%,
+    transparent 100%
+  );
+  transform: rotate(30deg);
+  animation: shine 6s infinite linear;
+  pointer-events: none;
+  z-index: -1;
+}
+
+@keyframes shine {
+  0% {
+    transform: translateX(-200%) rotate(30deg);
+  }
+  100% {
+    transform: translateX(200%) rotate(30deg);
+  }
+}
+
+.company-name {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 200;
+  letter-spacing: 1.2px;
+  background: linear-gradient(to right, #FFD700, #FFA500);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.contact-button {
+  transition: all 0.3s ease;
+}
+
+.contact-button:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+}
+
+.contact-button:active {
+  transform: scale(0.98);
+}
+
+.light-reflection {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg,
+    rgba(255,255,255,0) 0%,
+    rgba(255,255,255,0.3) 50%,
+    rgba(255,255,255,0) 100%);
+}
+
+.logo-container {
+  position: relative;
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  overflow: hidden;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4));
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 
+    0 4px 15px rgba(0, 0, 0, 0.3),
+    inset 0 2px 4px rgba(255, 255, 255, 0.1);
+}
+
+.logo-container img {
+  width: 85%;
+  height: 85%;
+  object-fit: contain;
+  position: relative;
+  z-index: 2;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+}
+
+.logo-container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at center, 
+    rgba(255, 215, 0, 0.1) 0%,
+    transparent 70%);
+  z-index: 1;
+} 
