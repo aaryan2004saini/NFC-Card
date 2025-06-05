@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ajmera Shringar - Contact</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: { primary: "#8A2BE2", secondary: "#9370DB" },
+            borderRadius: {
+              none: "0px",
+              sm: "4px",
+              DEFAULT: "8px",
+              md: "12px",
+              lg: "16px",
+              xl: "20px",
+              "2xl": "24px",
+              "3xl": "32px",
+              full: "9999px",
+              button: "8px",
+            },
+          },
+        },
+      };
+    </script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" />
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles/main.css" />
+  </head>
+  <body class="flex items-center justify-center p-6">
+    <!-- Error Message -->
+    <div id="errorMessage" class="glass rounded-2xl w-full max-w-md p-8 text-center hidden">
+      <i class="ri-error-warning-line text-6xl text-white mb-4"></i>
+      <h2 class="text-2xl text-white mb-4">Contact Not Found</h2>
+      <p class="text-white/80">Please check the URL and try again.</p>
+    </div>
+
+    <!-- Main Content -->
+    <div id="mainContent" class="glass rounded-2xl w-full max-w-md p-6 relative overflow-hidden hidden">
+      <div class="light-reflection"></div>
+      <!-- Logo and Header -->
+      <div class="flex flex-col items-center mb-6">
+        <div class="logo-container glass flex items-center justify-center mb-4">
+          <img src="/Ajmera-Logo.png" alt="AS" class="p-2">
+        </div>
+        <h1 id="contactName" class="company-name text-2xl text-center">Loading...</h1>
+        <p id="contactRole" class="text-white/80 mt-1 text-sm text-center">Please wait...</p>
+      </div>
+
+      <!-- Contact Buttons -->
+      <div class="space-y-2.5">
+        <a id="phoneBtn" href="tel:" class="contact-button glass flex items-center p-3 rounded-full w-full !rounded-button">
+          <div class="min-w-[40px] h-[40px] flex items-center justify-center">
+            <i class="ri-phone-line text-white/80 ri-lg"></i>
+          </div>
+          <span class="text-white text-sm truncate">Loading...</span>
+        </a>
+        <a id="emailBtn" href="mailto:" class="contact-button glass flex items-center p-3 rounded-full w-full !rounded-button">
+          <div class="min-w-[40px] h-[40px] flex items-center justify-center">
+            <i class="ri-mail-line text-white/80 ri-lg"></i>
+          </div>
+          <span class="text-white text-sm truncate">Loading...</span>
+        </a>
+        <a id="whatsappBtn" href="#" class="contact-button glass flex items-center p-3 rounded-full w-full !rounded-button">
+          <div class="min-w-[40px] h-[40px] flex items-center justify-center">
+            <i class="ri-whatsapp-line text-white/80 ri-lg"></i>
+          </div>
+          <span class="text-white text-sm truncate">WhatsApp</span>
+        </a>
+        <a id="websiteBtn" href="#" target="_blank" class="contact-button glass flex items-center p-3 rounded-full w-full !rounded-button">
+          <div class="min-w-[40px] h-[40px] flex items-center justify-center">
+            <i class="ri-global-line text-white/80 ri-lg"></i>
+          </div>
+          <span class="text-white text-sm truncate">Loading...</span>
+        </a>
+      </div>
+
+      <!-- Social Media Links -->
+      <div class="flex justify-center mt-8 space-x-4">
+        <a id="instagramBtn" href="#" class="contact-button glass w-10 h-10 rounded-full flex items-center justify-center">
+          <i class="ri-instagram-line text-white/80"></i>
+        </a>
+        <a id="facebookBtn" href="#" class="contact-button glass w-10 h-10 rounded-full flex items-center justify-center">
+          <i class="ri-facebook-line text-white/80"></i>
+        </a>
+        <a id="twitterBtn" href="#" class="contact-button glass w-10 h-10 rounded-full flex items-center justify-center">
+          <i class="ri-twitter-x-line text-white/80"></i>
+        </a>
+        <a id="pinterestBtn" href="#" class="contact-button glass w-10 h-10 rounded-full flex items-center justify-center">
+          <i class="ri-pinterest-line text-white/80"></i>
+        </a>
+      </div>
+
+      <div class="text-center mt-8 text-white/50 text-xs">
+        <p>© 2025 Ajmera Shringar. All rights reserved.</p>
+      </div>
+    </div>
+
+    <!-- Custom JavaScript -->
+    <script src="js/main.js"></script>
+  </body>
+</html> 
